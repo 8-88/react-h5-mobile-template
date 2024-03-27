@@ -2,7 +2,6 @@ import useI18n from "@/hooks/i18n.ts";
 import './index.less'
 import MainLayout from "@/layout/main/MainLayout.tsx";
 import {useI18nStore} from "@/store/i18n.ts";
-import React, { useRef } from "react";
 import { Button, Swiper, Toast } from "antd-mobile";
 
 const colors = ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"];
