@@ -20,7 +20,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "baseUrl": "./react-h5-mobile-template",
+    "baseUrl": "./",
     "paths": {
       "@/*": ["src/*"]
     },
