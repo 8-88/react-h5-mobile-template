@@ -3,8 +3,7 @@ import './index.less'
 import MainLayout from "@/layout/main/MainLayout.tsx";
 import {useI18nStore} from "@/store/i18n.ts";
 import React, { useRef } from "react";
-import { Button, Space, Swiper, Toast } from "antd-mobile";
-import { SwiperRef } from "antd-mobile/es/components/swiper";
+import { Button, Swiper, Toast } from "antd-mobile";
 
 const colors = ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"];
 
@@ -25,7 +24,6 @@ const items = colors.map((color, index) => (
 function Index() {
     const t = useI18n();
     const i18nStore = useI18nStore()
-    const ref = useRef<SwiperRef>(null);
 
     return (
         <>
