@@ -25,6 +25,7 @@ const items = colors.map((color, index) => (
 function Index() {
     const t = useI18n();
     const i18nStore = useI18nStore()
+    const ref = useRef<SwiperRef>(null);
 
     return (
         <>
