@@ -1,8 +1,26 @@
 import useI18n from "@/hooks/i18n.ts";
 import './index.less'
 import MainLayout from "@/layout/main/MainLayout.tsx";
-import {Button} from "antd-mobile";
 import {useI18nStore} from "@/store/i18n.ts";
+import React, { useRef } from "react";
+import { Button, Space, Swiper, Toast } from "antd-mobile";
+import { SwiperRef } from "antd-mobile/es/components/swiper";
+
+const colors = ["#ace0ff", "#bcffbd", "#e4fabd", "#ffcfac"];
+
+const items = colors.map((color, index) => (
+  <Swiper.Item key={index}>
+    <div
+      // className={styles.content}
+      style={{ background: color, height: "200px", color: "#fff" }}
+      onClick={() => {
+        Toast.show(`你点击了卡片 ${index + 1}`);
+      }}
+    >
+      {index + 1}
+    </div>
+  </Swiper.Item>
+));
 
 function Index() {
     const t = useI18n();
@@ -46,6 +64,16 @@ function Index() {
                             fontSize: '18px',
                         }
                     }>Font size 18px</p>
+                  <Swiper
+                    loop
+                    autoplay
+                    onIndexChange={(i) => {
+                      console.log(i, "onIndexChange1");
+                    }}
+                  >
+                    {items}
+                  </Swiper>
+                    
                 </div>
             </MainLayout>
         </>
