@@ -49,7 +49,7 @@ jobs:
           path: ./dist
 
       - name: Deploy to GitHub Pages (部署到 GitHub Pages)
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         # en: Only deploy when the push event of the master branch is triggered
         # zh: 仅在触发 master 分支的 push 事件时部署
         if: github.ref == 'refs/heads/main'
