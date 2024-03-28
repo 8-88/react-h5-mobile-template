@@ -9,6 +9,11 @@
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx}": [
+      "npx eslint --fix"
+    ]
+  },
   "dependencies": {
     "@icon-park/react": "^1.4.2",
     "@types/node": "^20.10.0",
